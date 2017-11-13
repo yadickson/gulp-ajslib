@@ -43,7 +43,7 @@ function srcScripts() {
 function buildScripts(options) {
     var minimal = isMinimal(options);
     var dest = getDestination(options);
-    var name = geName(options);
+    var name = getName(options);
     return srcScripts()
         .pipe(gulpif(minimal, babel({
             presets: ['env', 'minify']
