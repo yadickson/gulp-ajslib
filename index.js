@@ -15,7 +15,7 @@ const uglify = require('gulp-uglify');
 const ngdocs = require('gulp-ngdocs-components');
 
 const paths = {
-    srcScripts: ['src/scripts/**/*.js'],
+    srcScripts: ['src/**/*.js'],
     srcTests: ['test/**/*.js']
 }
 
