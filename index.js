@@ -11,7 +11,6 @@ const angularFilesort = require('gulp-angular-filesort');
 const babel = require('gulp-babel');
 const series = require('stream-series');
 const inject = require('gulp-inject');
-const cache = require('gulp-cache');
 const uglify = require('gulp-uglify');
 const ngdocs = require('gulp-ngdocs-components');
 
