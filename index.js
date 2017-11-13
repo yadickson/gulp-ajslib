@@ -90,7 +90,6 @@ function vendorTestScripts(options) {
         .pipe(order([
             'jquery.js',
             'angular.js',
-            'angular-ui-router.js',
             'angular-mocks.js',
             '*'
         ]));
