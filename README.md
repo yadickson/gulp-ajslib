@@ -8,8 +8,16 @@ Gulp Angular JS utils to build Library
 
 ## Installation
 
+Simply run a install using your terminal and you're good to go!
+
 ```bash
-npm install --save gulp-ajslib gulp gulp-order
+npm install --save gulp gulp-order gulp-ajslib 
+```
+
+If you're a cool kid using Yarn then simply just use yarn as you would
+
+```bash
+yarn add gulp gulp-order gulp-ajslib 
 ```
 
 ## Generator ajslib
