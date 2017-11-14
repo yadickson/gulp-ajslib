@@ -79,7 +79,6 @@ function srcTestsScripts() {
 }
 
 function vendorTestScripts(options) {
-    var bootstrap = isBootstrap(options);
     return gulp.src(mainNpmFiles()
             .concat('!node_modules/**/index.js')
             .concat('node_modules/angular/angular.js')
