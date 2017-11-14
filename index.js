@@ -94,7 +94,7 @@ function vendorTestScripts(options) {
 }
 
 function updateKarmaFile(options) {
-    var configFile = getConfigFile(options);
+    var configFile = options.configFile || 'karma.conf.js';
     var dest = getDestination(options);
     return gulp.src(configFile)
         .pipe(inject(series(vendorScripts(options), vendorTestScripts(options), srcScripts(), srcTestsScripts()), {
