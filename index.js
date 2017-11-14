@@ -4,7 +4,6 @@ const gulp = require('gulp');
 const rename = require('gulp-rename');
 const gulpif = require('gulp-if');
 const concat = require('gulp-concat');
-const addsrc = require('gulp-add-src');
 const mainNpmFiles = require('gulp-main-npm-files');
 const order = require('gulp-order');
 const angularFilesort = require('gulp-angular-filesort');

@@ -9,7 +9,7 @@ Gulp Angular JS utils to build Library
 ## Installation
 
 ```bash
-npm install -g gulp-ajslib
+npm install --save gulp-ajslib gulp
 ```
 
 ## Generator ajslib

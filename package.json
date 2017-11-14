@@ -1,17 +1,15 @@
 {
   "name": "gulp-ajslib",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Gulp Angular JS utils to build Library",
   "main": "index.js",
   "repository": "https://github.com/yadickson/gulp-ajslib",
   "author": "Yadickson Soto <yadickson@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {
-    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-minify": "^0.2.0",
-    "gulp": "^3.9.1",
-    "gulp-add-src": "^0.2.0",
     "gulp-angular-filesort": "^1.1.1",
     "gulp-babel": "^7.0.0",
     "gulp-concat": "^2.6.1",
@@ -23,5 +21,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^3.0.0",
     "stream-series": "^0.1.1"
+  },
+  "peerDependencies": {
+    "gulp": "^3.9.1"
   }
 }
