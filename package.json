@@ -1,6 +1,6 @@
 {
   "name": "gulp-ajslib",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Gulp Angular JS utils to build Library",
   "main": "index.js",
   "repository": "https://github.com/yadickson/gulp-ajslib",
@@ -17,6 +17,7 @@
     "gulp-inject": "^4.3.0",
     "gulp-main-npm-files": "^1.0.5",
     "gulp-rename": "^1.2.2",
+    "gulp-strip-debug": "^1.1.0",
     "gulp-uglify": "^3.0.0",
     "stream-series": "^0.1.1"
   },

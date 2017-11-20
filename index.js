@@ -12,6 +12,7 @@ const series = require('stream-series');
 const inject = require('gulp-inject');
 const uglify = require('gulp-uglify');
 const ngdocs = require('gulp-ngdocs-components');
+const stripDebug = require('gulp-strip-debug');
 
 const paths = {
     srcScripts: ['src/**/*.js'],
@@ -44,6 +45,7 @@ function buildScripts(options) {
     var dest = getDestination(options);
     var name = getName(options);
     return srcScripts()
+        .pipe(gulpif(minimal, stripDebug()))
         .pipe(gulpif(minimal, babel({
             presets: ['env', 'minify']
         })))
