@@ -4,6 +4,7 @@ const gulp = require('gulp');
 const rename = require('gulp-rename');
 const gulpif = require('gulp-if');
 const concat = require('gulp-concat');
+const addsrc = require('gulp-add-src');
 const mainNpmFiles = require('gulp-main-npm-files');
 const order = require('gulp-order');
 const angularFilesort = require('gulp-angular-filesort');
@@ -33,6 +34,14 @@ function getDestination(options) {
 
 function getName(options) {
     return getOptions(options).name || 'index';
+}
+
+function isAddPaths(options) {
+    return getAddPaths(options).length > 0;
+}
+
+function getAddPaths(options) {
+    return getOptions(options).addpaths || [];
 }
 
 function srcScripts() {
@@ -76,16 +85,19 @@ function srcTestsScripts() {
             '**/*_directive_test.js',
             '**/*_filter_test.js',
             '**/*_decorator_test.js',
+            '**/*_component_test.js',
             '*'
         ]));
 }
 
 function vendorTestScripts(options) {
+    var addPaths = isAddPaths(options);
     return gulp.src(mainNpmFiles()
             .concat('!node_modules/**/index.js')
             .concat('node_modules/angular/angular.js')
             .concat('node_modules/angular-mocks/angular-mocks.js')
         )
+        .pipe(gulpif(addPaths, addsrc(getAddPaths(options))))
         .pipe(order([
             'jquery.js',
             'angular.js',
